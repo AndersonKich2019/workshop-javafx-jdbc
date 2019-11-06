@@ -46,6 +46,7 @@ public class MainViewController implements Initializable{
 		loadView("/gui/About.fxml", x -> {});//Função de inicialização(Lambda) vazia. 
 	}
 	
+	
 	public synchronized <T> void loadView(String absolutname, Consumer<T> initializingAction) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(absolutname));
