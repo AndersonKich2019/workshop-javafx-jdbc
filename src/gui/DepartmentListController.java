@@ -94,8 +94,10 @@ public class DepartmentListController implements Initializable{
 		Pane pane = loader.load();
 		
 		DepartmentFormController controler = loader.getController();
-		controler.setDepartment(obj);
+		controler.setDepartment(obj);//injeção de dependencia
+		controler.DepartmentService(new DepartmentService());//injeção de dependencia
 		controler.updateFormData();
+	
 		
 		Stage dialogStage = new Stage();//Instanciar novo palco para o modal
 		dialogStage.setTitle("Enter Department data");//Titulo 
